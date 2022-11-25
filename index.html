@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dragoness' Wares</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="waviy">
+          <p id="copyright">Készítette: </p>
+          <span style="--i:1">F</span>
+          <span style="--i:2">A</span>
+          <span style="--i:3">R</span>
+          <span style="--i:4">K</span>
+          <span style="--i:5">A</span>
+          <span style="--i:6">S</span>
+          <span> </span>
+          <span style="--i:7">B</span>
+          <span style="--i:8">E</span>
+          <span style="--i:9">N</span>
+          <span style="--i:10">C</span>
+          <span style="--i:11">E</span>
+        </div>
+        <div class="container-xxl">
+            <h1 id="cim">Dragoness' Wares</h1>
+  
+            <form class="form-inline">
+                <div class="col-sm-3">   
+                    <div class="input-group input-group-sm mb-3 col-sm-3">
+                        <button type="button" class="btn btn-warning" onclick="SearchProduct()">Keresés</button>               
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Ide írja a keresni kívánt terméket..." id="searchInput">
+                    </div>  
+                </div>
+            </form>
+            <table class="table table-dark table-hover table-small" id="mainTable">
+                <thead>
+                    <tr>
+                        <th onclick="SortByName()">Név</th>
+                        <th onclick="SortByType()">Típus</th>
+                        <th onclick="SortByPrice()">Ár</th>
+                        <th onclick="SortByQuantity()">Készlet</th>
+                        <th>Múveletek</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">   
+                  
+                </tbody>   
+          </table>
+
+          <button type="button" class="btn btn-warning mb-3" id="btnNewProduct">Új áru feltöltése</button>
+          <div class="row mt-5 d-none mb-3" id="form">
+            <h2 class="d-none" id="title-new">Új áru</h2>
+            <h2 class="d-none" id="title-update">Áru módosítás</h2>
+            <form>
+    
+              <div class="mb-3 col-3">
+                <label for="name" class="form-label" id="name-label">Termék neve:</label>
+                <input
+                type="text"
+                class="form-control"
+                id="nameInput"
+                aria-describedby="nameHelp"
+                />
+    
+              </div>
+    
+              <div class="mb-3 col-3">
+                <label for="type" class="form-label" id="type-label">A termék típusa:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="typeInput"
+                  />
+                </div>
+    
+                <div class="mb-3 col-3">
+                  <label for="price" class="form-label" id="price-label">Termék ára</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="priceInput"
+                  />
+                </div>
+                <div class="mb-3 col-3">
+                    <label for="quantity" class="form-label" id="quantity-label">Hány darab</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="quantityInput"
+                    />
+                  </div>
+    
+                <button type="submit" class="btn btn-primary" id="save-product">Hozzáad</button>
+                <button type="button" class="btn btn-secondary" id="cancel-product">Vissza</button>
+              </form>
+            </div>
+        
+    </div>
+    <script src="my.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
